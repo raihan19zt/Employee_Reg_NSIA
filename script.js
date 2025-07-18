@@ -31,15 +31,61 @@ function displayEmployees(filteredList = null) {
 
 form.onsubmit = function (e) {
   e.preventDefault();
+
+  // Clear previous errors
+  document.querySelectorAll(".error").forEach(el => el.remove());
+
+  let isValid = true;
+
+  const firstName = form.firstName;
+  const lastName = form.lastName;
+  const department = form.department;
+  const email = form.email;
+  const phone = form.phone;
+
+  const nameRegex = /^[a-zA-Z\s\-]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^\d{10}$/;
+
+  function showError(input, message) {
+    const error = document.createElement("div");
+    error.className = "error";
+    error.textContent = message;
+    input.parentNode.appendChild(error);
+    isValid = false;
+  }
+
+  if (!nameRegex.test(firstName.value.trim())) {
+    showError(firstName, "First name must contain only letters, spaces, or hyphens.");
+  }
+
+  if (!nameRegex.test(lastName.value.trim())) {
+    showError(lastName, "Last name must contain only letters, spaces, or hyphens.");
+  }
+
+  if (!nameRegex.test(department.value.trim())) {
+    showError(department, "Department must contain only letters or spaces.");
+  }
+
+  if (!emailRegex.test(email.value.trim())) {
+    showError(email, "Please enter a valid email address.");
+  }
+
+  if (!phoneRegex.test(phone.value.trim())) {
+    showError(phone, "Phone number must be exactly 10 digits.");
+  }
+
+  if (!isValid) return;
+
   const employees = getEmployees();
   const id = document.getElementById("empId").value;
 
   const newEmp = {
-    firstName: form.firstName.value.trim(),
-    lastName: form.lastName.value.trim(),
-    department: form.department.value.trim(),
-    email: form.email.value.trim(),
-    phone: form.phone.value.trim(),
+    firstName: firstName.value.trim(),
+    lastName: lastName.value.trim(),
+    department: department.value.trim(),
+    email: email.value.trim(),
+    phone: phone.value.trim(),
   };
 
   if (id) {
