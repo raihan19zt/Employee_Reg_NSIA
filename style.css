@@ -1,14 +1,29 @@
 body {
+  margin: 0;
+  padding: 0;
+  background-image: url('E:\nsia project/bg.jpg'); /* Replace with your image path */
+  
+  
+  background-size: cover;      /* Makes the image cover the entire area */
+  background-position: center; /* Keeps it centered */
+  background-repeat: no-repeat;
+  height: 150vh;
+  font-family: sans-serif;
+}
+
+body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color:transparent;
+  
   margin: 0;
   padding: 20px;
 }
 
 .container {
+  
   max-width: 900px;
   margin: auto;
-  background: white;
+  background: transparent;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -17,11 +32,18 @@ body {
   align-items: center;
 }
 
+/* h1*/
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
+   font-family: cursive, sans-serif;
+   
+ 
+  font-size:xx-large ;
+  color: white;
+ 
+  margin-bottom: 30px;
+
+}
 /* Form styles */
 form {
   display: flex;
@@ -32,6 +54,8 @@ form {
   max-width: 450px;
 }
 
+
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -39,14 +63,17 @@ form {
 }
 
 label {
-  font-weight: 600;
+  font-weight: 1000;
   margin-bottom: 5px;
-  color: #333;
-  font-size: 14px;
+  color:white;
+ 
+  
+  font-size: 1.12em;
 }
 
 form input {
   padding: 12px 15px;
+  background-color:#FEFFC4;
   font-size: 16px;
   border: 1.8px solid #ccc;
   border-radius: 8px;
@@ -63,7 +90,7 @@ form button {
   width: 100%;
   padding: 15px 0;
   font-size: 20px;
-  background-color: #28a745;
+  background-color: #1abc9c;
   color: white;
   border: none;
   border-radius: 8px;
@@ -73,7 +100,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #218838;
+  background-color: #56DFCF;
 }
 
 /* Search and sort wrapper */
@@ -108,7 +135,7 @@ form button:hover {
 }
 
 .search-icon {
-  color: #666;
+  color: white;
   padding: 10px;
   pointer-events: none;
   font-size: 16px;
@@ -123,7 +150,7 @@ form button:hover {
   opacity: 0;
   transition: opacity 0.4s ease;
   background: transparent;
-  color: #333;
+  color:black;
 }
 
 .search-wrapper:hover #searchInput,
@@ -219,4 +246,16 @@ button[onclick*="printEmployees"]:hover {
     margin-top: 30px;
     border-radius: 0 0 8px 8px;
   }
+}
+
+/* Error message style */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+#employeeTable{
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.1em;
 }
