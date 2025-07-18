@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Employee Ragestration</title>
-  <!-- Font Awesome CDN for search icon -->
+  <title>Employee  Registration</title>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -13,59 +12,33 @@
 </head>
 <body>
   <div class="container">
-    <h1>Employee Ragestration </h1>
+    <h1>Employee  Registration</h1>
     <form id="employeeForm" novalidate>
       <input type="hidden" id="empId" />
 
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input
-          type="text"
-          id="firstName"
-          placeholder="Enter your first name"
-          required
-        />
+        <input type="text" id="firstName" placeholder="Enter your first name" required />
       </div>
 
       <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input
-          type="text"
-          id="lastName"
-          placeholder="Enter your last name"
-          required
-        />
+        <input type="text" id="lastName" placeholder="Enter your last name" required />
       </div>
 
       <div class="form-group">
         <label for="department">Department</label>
-        <input
-          type="text"
-          id="department"
-          placeholder="Enter department"
-          required
-        />
+        <input type="text" id="department" placeholder="Enter department" required />
       </div>
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email"
-          required
-        />
+        <input type="email" id="email" placeholder="Enter your email" required />
       </div>
 
       <div class="form-group">
         <label for="phone">Phone Number</label>
-        <input
-          type="tel"
-          id="phone"
-          placeholder="Enter your phone number"
-          pattern="[0-9]{10}"
-          required
-        />
+        <input type="tel" id="phone" placeholder="Enter your phone number" required />
       </div>
 
       <button type="submit">Add / Update Employee</button>
@@ -74,12 +47,7 @@
     <div class="search-sort-wrapper">
       <div class="search-wrapper" tabindex="0">
         <i class="fas fa-search search-icon"></i>
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search by name, phone, or email"
-          aria-label="Search employees"
-        />
+        <input type="text" id="searchInput" placeholder="Search by name, phone, or email" aria-label="Search employees" />
       </div>
 
       <div class="sort-options">
@@ -101,6 +69,7 @@
       </thead>
       <tbody></tbody>
     </table>
+
     <button onclick="printEmployees()">Print Employees</button>
   </div>
   <script src="script.js"></script>
